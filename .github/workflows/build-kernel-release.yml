@@ -14,11 +14,11 @@ on:
         default: true
 
 jobs:
-  build-kernel-op11:
+  build-kernel-nord:
     uses: ./.github/workflows/build.yml
     secrets: inherit
     with:
-      model: "nord"
+      model: "nord_ce_2_lite_5g"
       soc: "holi"
       branch: "oneplus/sm6375"
       manifest: "oneplus_nord_ce_2_lite_5g.xml"
