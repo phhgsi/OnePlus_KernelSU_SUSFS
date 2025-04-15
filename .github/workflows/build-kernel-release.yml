@@ -18,7 +18,7 @@ jobs:
     uses: ./.github/workflows/build.yml
     secrets: inherit
     with:
-      model: "nord_ce_2_lite"
+      model: "nord"
       soc: "holi"
       branch: "oneplus/sm6375"
       manifest: "oneplus_nord_ce_2_lite_5g.xml"
@@ -28,7 +28,7 @@ jobs:
   trigger-release:
     runs-on: ubuntu-latest
     needs:
-        - build-kernel-nord_ce_2_lite
+        - build-kernel-nord
         
     if: ${{ inputs.make_release }}
     env:
